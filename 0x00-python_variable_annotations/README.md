@@ -47,3 +47,13 @@ The second element is the square of the int/float `v` and should be annotated as
 ## 8-make_multiplier.py
 Write a type-annotated function `make_multiplier` that takes a float `multiplier` as
 argument and returns a function that multiplies a float by `multiplier`.
+
+
+## 9-element_length.py
+
+Annotate the below function’s parameters and return values with the appropriate types
+
+```
+def element_length(lst):
+    return [(i, len(i)) for i in lst]
+```
