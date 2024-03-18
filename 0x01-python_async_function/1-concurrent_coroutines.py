@@ -3,13 +3,14 @@
 Launch multiple async tasks at once.
 """
 import asyncio
+from typing import List
 
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def wait_n(n: int, max_delay: int):
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """Spawn wait_random() n times with the specified max_delay."""
     results = await asyncio.gather(
         *(wait_random(max_delay) for _ in range(n))
     )
-    return results
+    return list(results)
